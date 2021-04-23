@@ -1,0 +1,32 @@
+1.Here I am do Programming Kit Blog Practice
+
+2.akhane problem hoiche http://image.intervention.io/api/resize package install korchi kintu resize korte pari nai
+
+3.image soho category delete bad ache; && image soho category update korle previous image delete hobe atao bad ache;
+
+
+
+
+https://github.com/Cipfahim
+
+
+*********Solution Foreign Key Problem******************
+Foreign key tokhooni kaj korbe jokhon id integer hobe;
+id default vabe bigint thake; manulay ba migration file a lokkho kore ata tik korte hobe ba database theke stucture theke relationship view theke define kore dite hobe;
+------------------------------------------------------------------
+
+Favorite post ke remove korte pari nai.........
+--------------------------------------------------------------- 
+
+
+
+
+
+
+
+
+
+
+
+
+
