@@ -37,7 +37,8 @@ Route::post('subscriber', [SubscriberController::class, 'store']);
 Route::get('post/{slug}', [SinglePostController::class, 'details'])->name('post.details');
 Route::get('post', [SinglePostController::class, 'index'])->name('post.index');
 
-
+Route::get('/category/{slug}', [SinglePostController::class, 'postByCategory'])->name('category.posts');
+Route::get('/tag/{slug}', [SinglePostController::class, 'postByTag'])->name('tag.posts');
 
 
 
