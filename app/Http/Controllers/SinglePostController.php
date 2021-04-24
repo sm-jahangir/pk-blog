@@ -20,12 +20,12 @@ class SinglePostController extends Controller
             Session::put($blogKey, 1);
         }
 
-        $randomposts = Post::all()->random(3);
+        $randomposts = Post::approved()->published()->take(3)->inRandomOrder()->get();
         return view('frontendpage/single-post', compact('post', 'randomposts'));
     }
     public function index()
     {
-        $posts = Post::latest()->paginate(6);
+        $posts = Post::latest()->approved()->published()->paginate(6);
         return view('frontendpage.blog-post',compact('posts'));
     }
 

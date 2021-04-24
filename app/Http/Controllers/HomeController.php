@@ -12,7 +12,7 @@ class HomeController extends Controller
     public function index()
     {
         $categories = Category::all();
-        $posts = Post::all();
+        $posts =  Post::approved()->published()->take(6)->inRandomOrder()->get();
         return view('welcome', compact('categories','posts'));
     }
 
