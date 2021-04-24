@@ -16,6 +16,8 @@ use App\Http\Controllers\Author\AuthorSettingsController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\SinglePostController;
+use App\Http\Controllers\Admin\AdminCommentController;
+use App\Http\Controllers\Author\AuthorCommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +62,9 @@ Route::group(['as'=> 'admin.','prefix'=>'admin','namespace'=>'Admin','middleware
 
     Route::get('/favorite', [AdminFavoriteController::class, 'index'])->name('favorite.index');
 
+    Route::get('/comments', [AdminCommentController::class, 'index'])->name('comment.index');
+    Route::get('/comment/delete/{id}', [AdminCommentController::class, 'destroy'])->name('comment.destroy');
+
 
     // Tags
     Route::get('/tags/add', [TagController::class, 'create']);
@@ -101,6 +106,8 @@ Route::group(['as'=> 'author.','prefix'=>'author','namespace'=>'Author','middlew
 
     
     Route::get('/dashboard', [AuthorDashboardController::class, 'index'])->name('dashboard');
+    Route::get('/comments', [AuthorCommentController::class, 'index'])->name('comment.index');
+    Route::get('/comment/delete/{id}', [AuthorCommentController::class, 'destroy'])->name('comment.destroy');
 
     
     Route::get('settings', [AuthorSettingsController::class, 'index']);

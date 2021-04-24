@@ -158,6 +158,12 @@
                         <span>Favorite Post</span>
                     </a>
                 </li>
+                <li class="{{ Request::is('admin/comments') ? 'active' : '' }}">
+                    <a href="{{url('admin/comments')}}">
+                        <i class="material-icons">comment</i>
+                        <span>Comments Post</span>
+                    </a>
+                </li>
                 <li class="header">System</li>
                 
                 <li>
@@ -250,6 +256,12 @@
                     <a href="{{url('author/favorite')}}">
                         <i class="material-icons">trending_down</i>
                         <span>Favorite Post</span>
+                    </a>
+                </li>
+                <li class="{{ Request::is('author/comments') ? 'active' : '' }}">
+                    <a href="{{url('author/comments')}}">
+                        <i class="material-icons">comment</i>
+                        <span>Comments Post</span>
                     </a>
                 </li>
 
