@@ -18,6 +18,7 @@ use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\SinglePostController;
 use App\Http\Controllers\Admin\AdminCommentController;
 use App\Http\Controllers\Author\AuthorCommentController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,7 +41,7 @@ Route::get('post', [SinglePostController::class, 'index'])->name('post.index');
 Route::get('/category/{slug}', [SinglePostController::class, 'postByCategory'])->name('category.posts');
 Route::get('/tag/{slug}', [SinglePostController::class, 'postByTag'])->name('tag.posts');
 
-
+Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 
 
